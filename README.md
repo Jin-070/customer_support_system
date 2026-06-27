@@ -130,37 +130,9 @@ This creates:
 
 ## 🧠 LangGraph Workflow
 
-```mermaid
-flowchart TD
-    A([🧑 Customer Query]) --> B[🔍 classify_intent]
-    B -->|conditional routing| C{Intent Router}
-    
-    C -->|sales| D1[ Sales Agent]
-    C -->|technical| D2[ Technical Agent]
-    C -->|billing| D3[ Billing Agent]
-    C -->|account| D4[ Account Agent]
-    C -->|memory| D5[ Memory Recall]
-    
-    D1 --> E{Requires Approval?}
-    D2 --> E
-    D3 --> E
-    D4 --> E
-    D5 --> E
-    
-    E -->|✅ Yes| F[👥 human_approval]
-    E -->|❌ No| G[🎯 supervisor]
-    F --> G
-    
-    G --> H([ END])
-    
-    style A fill:#4CAF50,stroke:#2E7D32,color:#fff
-    style H fill:#F44336,stroke:#B71C1C,color:#fff
-    style B fill:#2196F3,stroke:#0D47A1,color:#fff
-    style C fill:#FF9800,stroke:#E65100,color:#fff
-    style E fill:#FF9800,stroke:#E65100,color:#fff
-    style F fill:#9C27B0,stroke:#4A148C,color:#fff
-    style G fill:#009688,stroke:#004D40,color:#fff
-```
+<p align="center">
+  <img src="screenshots/Workflow_Diagram.png" alt="LangGraph Workflow Diagram" width="750"/>
+</p>
 
 ---
 
