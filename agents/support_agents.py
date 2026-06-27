@@ -171,8 +171,11 @@ def memory_agent(state: SupportState) -> SupportState:
     history = get_history(customer_id, limit=20)
     formatted = format_history_for_prompt(history)
 
-    system = """You are a support assistant. Answer the customer's question using their conversation history.
-Be helpful and accurate."""
+    system = """You are a support assistant. Use the customer's conversation history as the source of truth.
+When asked about a previous support issue, review the customer's messages and directly summarize the most recent message that describes a genuine support problem or request.
+If the history contains such an issue, do not say that no previous issue exists. Do not invent or infer an issue from unrelated messages.
+If there is no conversation history, or the history contains no identifiable support issue, politely say that no previous support issue was found.
+Be helpful, accurate, and concise."""
 
     user_msg = f"""Customer Conversation History:
 {formatted}
