@@ -1,5 +1,5 @@
 <div align="center">
-*GithubRepo:* https://github.com/Jin-070/customer_support_system
+*GithubRepo:* https://github.com/Jai-2077/customer_support_system
 
 # 🤖 ABC Technologies
 ### AI-Powered Customer Support Automation System
