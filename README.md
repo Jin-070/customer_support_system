@@ -57,7 +57,7 @@ ollama serve
 In a new terminal, pull required models:
 
 ```bash
-ollama pull llama3.2:3b
+ollama pull qwen2.5:7b
 ollama pull nomic-embed-text
 ```
 
@@ -173,7 +173,7 @@ flowchart TD
 ## 🚀 Key Features
 
 ✅ **Intent Classification**  
-Ollama (`llama3.2:3b`) classifies queries into:
+Ollama (`qwen2.5:7b`) classifies queries into:
 - Sales  
 - Technical Support  
 - Billing  
